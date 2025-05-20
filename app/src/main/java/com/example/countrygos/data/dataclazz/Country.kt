@@ -10,5 +10,6 @@ data class Country(
     val name: String,
     val description: String,
     val isFavourite: Boolean,
-    val photo: Int
+    val photo: Int,
+    val capital:String
 )

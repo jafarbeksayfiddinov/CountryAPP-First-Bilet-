@@ -29,10 +29,10 @@ fun AppNavHost(
         composable(NavigationItem.FavouriteScreen.route){
             FavouriteScreen(navController)
         }
-        composable(NavigationItem.DescriptionScreen.route) {
-            DescriptionScreen(navController)
+        composable(NavigationItem.DescriptionScreen.route+"/{countryName}") { backStackEntry ->
+            val countryName = backStackEntry.arguments?.getString("countryName") ?: ""
+            DescriptionScreen(navController = navController, countryName = countryName)
         }
-
 
     }
 }

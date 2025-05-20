@@ -43,19 +43,24 @@ class MainActivity : ComponentActivity() {
                             name = "Uzbekistan",
                             description = "A country in Central Asia.",
                             isFavourite = false,
-                            photo = R.drawable.uzb_icon
+                            photo = R.drawable.uzb_icon,
+                            capital = "Tashkent"
                         ),
                         Country(
                             name = "United States",
                             description = "A country in North America.",
                             isFavourite = false,
-                            photo = R.drawable.usa_icon
+                            photo = R.drawable.usa_icon,
+                            capital = "Washington"
+
                         ),
                         Country(
                             name = "France",
                             description = "A country in Europe.",
                             isFavourite = false,
-                            photo = R.drawable.france_icon
+                            photo = R.drawable.france_icon,
+                            capital = "Lyon"
+
                         )
                     )
                     countryDao.insertAll(initialCountries)

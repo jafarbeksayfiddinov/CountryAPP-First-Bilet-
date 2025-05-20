@@ -18,10 +18,8 @@ class CountryViewModel(application: Application) : AndroidViewModel(application)
     }
     // Expose LiveData properties directly from DAO (assuming dao.getAll() returns LiveData<List<Country>>)
     val allCountries: LiveData<List<Country>> = dao.getAll()
+    val favouriteCountries:LiveData<List<Country>> =dao.getFavourites()
 
-    fun getFavouriteCountries()= liveData {
-        emit(dao.getFavourites())
-    }
     fun toggleFavourite(country: Country) {
         viewModelScope.launch {
             val updated = country.copy(isFavourite = !country.isFavourite)

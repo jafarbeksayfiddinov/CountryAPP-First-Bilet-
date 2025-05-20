@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.countrygos.data.dao.CountryDao
 import com.example.countrygos.data.dataclazz.Country
 
-@Database(entities = [Country::class], version = 2)
+@Database(entities = [Country::class], version = 3)
 abstract class CountryDatabase : RoomDatabase() {
     abstract fun countryDao(): CountryDao
 
